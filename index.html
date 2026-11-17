@@ -2,126 +2,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
-    <title>A Little Letter for Rapunsal 🤍</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#faf8f5">
+  <title>A Little Letter for Rapunsal 🤍</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- PASSWORD SCREEN -->
-    <section id="password-screen" class="password-screen">
-        <div class="password-card">
-            <div class="heart">♡</div>
-            <p class="small-heading">A LITTLE SOMETHING FOR YOU</p>
-            <h1>Dear Rapunsal</h1>
-            <p class="subtitle">Some words are worth reading.</p>
+  <!-- Password screen -->
+  <div class="gate" id="passwordScreen">
+    <div class="gate-card">
+      <div class="gate-flower">✿</div>
+      <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+      <h1>Dear Rapunsal</h1>
+      <p class="gate-text">A small page, made with care.<br>Enter the password to open it.</p>
 
-            <form id="password-form">
-                <input
-                    type="password"
-                    id="password-input"
-                    placeholder="Enter the password"
-                    autocomplete="off"
-                    required
-                >
-                <button type="submit">Open My Letter</button>
-            </form>
+      <form id="passwordForm">
+        <input
+          type="password"
+          id="passwordInput"
+          placeholder="Enter password"
+          autocomplete="off"
+          aria-label="Password"
+          required
+        >
+        <button type="submit" class="primary-button">Open your letter <span>♡</span></button>
+      </form>
 
-            <p id="password-error"></p>
-            <span class="bottom-note">Made with sincerity 🤍</span>
-        </div>
+      <p class="error-message" id="errorMessage" aria-live="polite"></p>
+      <p class="gate-footer">Made with sincerity 🤍</p>
+    </div>
+  </div>
+
+  <!-- Main website -->
+  <main id="mainWebsite" class="hidden">
+
+    <header class="topbar">
+      <a href="#home" class="brand">a little letter <span>♡</span></a>
+      <button class="music-button" id="musicButton" type="button">
+        <span id="musicIcon">♫</span>
+        <span id="musicLabel">Play music</span>
+      </button>
+    </header>
+
+    <audio id="backgroundMusic" loop preload="auto">
+      <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="hero" id="home">
+      <div class="hero-decoration decoration-one">✿</div>
+      <div class="hero-decoration decoration-two">♡</div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">A MESSAGE FROM THE HEART</p>
+        <h1>For you,<br><em>Rapunsal.</em></h1>
+        <p class="hero-subtitle">Some words are better said with a little care.</p>
+        <a href="#letter" class="scroll-link">Read my letter <span>↓</span></a>
+      </div>
+      <div class="hero-bottom">WITH SINCERITY · ALWAYS</div>
     </section>
 
-    <!-- MAIN WEBSITE -->
-    <main id="main-content" hidden>
+    <section class="letter-section section" id="letter">
+      <div class="section-inner reveal">
+        <p class="eyebrow">A FEW WORDS</p>
+        <h2>I'm sorry.</h2>
+        <div class="small-divider">✧</div>
 
-        <header class="hero">
-            <span class="hero-heart">♡</span>
-            <p class="small-heading">A MESSAGE FROM THE HEART</p>
-            <h1>Dear Rapunsal,</h1>
-            <p class="hero-subtitle">
-                There are a few things I wish I could tell you.
-            </p>
-            <a href="#letter" class="scroll-link">Read my letter ↓</a>
-        </header>
+        <div class="letter-copy">
+          <p>Dear Rapunsal,</p>
 
-        <section id="letter" class="letter-section">
-            <p class="section-label">A FEW HONEST WORDS</p>
-            <h2>I'm truly sorry.</h2>
+          <p>
+            I don't know if these words can change anything,
+            but I wanted to say them sincerely.
+          </p>
 
-            <div class="letter-text">
-                <p>
-                    I know that words cannot change what happened,
-                    and I don't expect them to erase the past.
-                </p>
+          <p>
+            I'm sorry for the moments when I hurt you,
+            for the things I could have handled better,
+            and for the times I didn't understand how you felt.
+          </p>
 
-                <p>
-                    I just want you to know that I'm genuinely sorry
-                    for the moments I hurt you, the things I could
-                    have done better, and the times I failed to
-                    understand you.
-                </p>
+          <p>
+            I know that words alone cannot undo the past.
+            I just want you to know that I have thought about
+            everything, and I genuinely wish you happiness
+            and peace.
+          </p>
 
-                <p>
-                    You deserved kindness, patience, and understanding.
-                    I'm sorry for the times I didn't give you that.
-                </p>
+          <p>
+            I still value the memories we shared.
+            They will always mean something to me.
+          </p>
 
-                <p>
-                    I'm not writing this to pressure you or ask
-                    anything from you. I simply wanted to say
-                    what I should have said before.
-                </p>
+          <p>
+            If you ever feel comfortable talking again,
+            I would be happy to listen. There is no pressure
+            and no expectation. I will respect whatever you choose.
+          </p>
 
-                <p>
-                    Whatever happens next, I sincerely wish you
-                    happiness and beautiful days ahead.
-                </p>
+          <p class="letter-signoff">Take care of yourself. 🤍</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="memories-section section" id="memories">
+      <div class="section-inner">
+        <div class="reveal">
+          <p class="eyebrow">A FEW MOMENTS</p>
+          <h2>Moments to remember.</h2>
+          <p class="section-description">
+            Some memories deserve a quiet little place of their own.
+          </p>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo-card reveal">
+            <div class="photo-frame">
+              <img src="photo-1.jpeg" alt="A special memory" loading="lazy">
             </div>
+            <figcaption>A beautiful moment</figcaption>
+          </figure>
 
-            <p class="signature">With sincerity, ♡</p>
-        </section>
-
-        <!-- PHOTO SECTION -->
-        <section class="memories-section">
-            <p class="section-label">A FEW MEMORIES</p>
-            <h2>Moments to remember.</h2>
-
-            <div class="photo-grid">
-                <div class="photo-card">
-                    <img src="photo-1.jpeg" alt="A special memory">
-                </div>
-                <div class="photo-card">
-                    <img src="photo-2.jpeg" alt="Another special memory">
-                </div>
+          <figure class="photo-card reveal">
+            <div class="photo-frame">
+              <img src="photo-2.jpeg" alt="Another special memory" loading="lazy">
             </div>
-        </section>
+            <figcaption>A little memory</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-        <!-- FINAL MESSAGE -->
-        <section class="final-section">
-            <span class="final-heart">♡</span>
-            <h2>If you ever feel like talking...</h2>
-            <p>
-                I'd be happy to listen. No pressure,
-                no expectations. Just an honest conversation.
-            </p>
+    <section class="final-section section" id="final">
+      <div class="final-content reveal">
+        <div class="final-heart">♡</div>
+        <p class="eyebrow">ONE LAST THING</p>
+        <h2>Whatever happens,<br><em>I wish you well.</em></h2>
+        <p class="final-text">
+          Thank you for being part of some moments
+          that I will always remember.
+        </p>
+        <a
+          class="whatsapp-button"
+          href="https://wa.me/94711911913?text=Hi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          If you'd like to talk <span>♡</span>
+        </a>
+        <p class="no-pressure">Only if you feel comfortable. No pressure.</p>
+      </div>
+      <footer>Made with care <span>♡</span></footer>
+    </section>
 
-            <a
-                class="whatsapp-button"
-                href="https://wa.me/94711911913"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Let's talk on WhatsApp
-            </a>
+  </main>
 
-            <p class="footer-note">Wishing you nothing but happiness. 🤍</p>
-        </section>
-
-    </main>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
